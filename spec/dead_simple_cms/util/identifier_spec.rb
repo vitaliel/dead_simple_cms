@@ -5,6 +5,7 @@ describe DeadSimpleCMS::Util::Identifier do
   before(:all) do
     IdentifierTest = Class.new do
       include DeadSimpleCMS::Util::Identifier
+      include DeadSimpleCMS::Util::Identifier::InstanceMethods
     end
   end
 

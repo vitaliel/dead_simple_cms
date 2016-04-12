@@ -75,7 +75,9 @@ module DeadSimpleCMS
     end
 
     def save!
-      _run_save_callbacks { storage.write }
+      run_callbacks :save do
+        storage.write
+      end
     end
 
     def build(&block)

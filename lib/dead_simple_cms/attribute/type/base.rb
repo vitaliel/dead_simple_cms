@@ -4,6 +4,7 @@ module DeadSimpleCMS
       class Base
 
         include Util::Identifier
+        include Util::Identifier::InstanceMethods
 
         class << self
           # Public: the method name used to identify this type in the Builder

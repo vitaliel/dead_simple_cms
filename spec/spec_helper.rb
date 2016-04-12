@@ -12,6 +12,8 @@ require 'simple_form'
 require 'dead_simple_cms'
 require File.expand_path('../setup', __FILE__)
 
+Time.zone = 'UTC'
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

@@ -3,6 +3,7 @@ module DeadSimpleCMS
     class Configuration
 
       include Util::Identifier
+      include Util::Identifier::InstanceMethods
 
       require 'dead_simple_cms/group/presenter/render_mixin'
       include Presenter::RenderMixin

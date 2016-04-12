@@ -4,6 +4,7 @@ describe DeadSimpleCMS::Util::Identifier::Dictionary do
 
   class ClassWithIdentifier
     include DeadSimpleCMS::Util::Identifier
+    include DeadSimpleCMS::Util::Identifier::InstanceMethods
     alias :some_method :identifier
   end
 

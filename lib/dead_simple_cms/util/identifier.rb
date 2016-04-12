@@ -18,22 +18,18 @@ module DeadSimpleCMS
       end
 
       module InstanceMethods
-
         def initialize(identifier, options={})
           @identifier = identifier.to_sym
           @label = options[:label] || identifier.to_s.titleize
           super()
         end
-
       end
 
       module ClassMethods
-
         # Public: creates a new dictionary class.
         def new_dictionary(*args, &block)
           Dictionary.new(self, *args, &block)
         end
-
       end
     end
   end

@@ -2,6 +2,7 @@ module DeadSimpleCMS
   module Attribute
     class Collection
       include Util::Identifier
+      include Util::Identifier::InstanceMethods
 
       attr_reader :attributes
 
