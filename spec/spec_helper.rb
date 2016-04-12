@@ -22,7 +22,7 @@ end
 # Datbase setup.
 require 'sqlite3'
 ActiveRecord::Base.establish_connection(adapter: "sqlite3", database: "dead_simple_cms.sqlite3")
-ActiveRecord::Base.silence do
+#ActiveRecord::Base.silence do
   ActiveRecord::Migration.verbose = false
   ActiveRecord::Schema.define :version => 0 do
     create_table :dead_simple_cms, :force => true do |t|
@@ -32,7 +32,7 @@ ActiveRecord::Base.silence do
     end
     add_index :dead_simple_cms, :key, :unique => true
   end
-end
+#end
 
 #RSpec::Matchers.define :have_only_tag_values do |expected|
 #  match do |actual|

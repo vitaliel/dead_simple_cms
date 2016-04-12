@@ -5,8 +5,13 @@ module DeadSimpleCMS ; end
 
 # These are the only two things needed from the rails family to run this. ActiveModel is necessary for observing and
 # callbacks done in the DeadSimpleCMS::Section class.
-require 'active_support/core_ext'
+require 'active_support/all'
 require 'active_model'
+
+require 'rails-observers'
+require 'rails/observers/active_model'
+require "rails/observers/activerecord/active_record"
+require 'rails/observers/action_controller/caching'
 
 require 'dead_simple_cms/configuration'
 
@@ -49,6 +54,8 @@ if defined?(ActionView)
 end
 
 if defined?(ActionController)
+  require 'rails/observers/action_controller/caching/sweeping'
+
   require 'dead_simple_cms/rails/action_controller/extensions'
   require 'dead_simple_cms/rails/action_controller/fragment_sweeper'
 end
